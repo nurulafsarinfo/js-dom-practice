@@ -6,7 +6,7 @@
     <title>Github Delete</title>
 </head>
 <body>
-    <h1>My secret info</h1>
+    <h1 id="secret-info">My secret info</h1>
     <br>
     <input id="input-delete" placeholder="write delete" type="text">
     <button id="btn-delete" disabled>Delete</button>
@@ -20,7 +20,9 @@
 
             if(text === 'delete'){
                 console.log("delete typed");
-                btnDelete.removeAttribute('disabled')
+                btnDelete.removeAttribute('disabled');
+                const secretTag = document.getElementById('secret-info');
+                secretTag.style.display = 'none';
             }
             else{
                 console.log('something else');
