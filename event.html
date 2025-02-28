@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even handler</title>
+</head>
+<body>
+    <h1 id="page-title">Event handler</h1>
+    <button id="btn-update-title">Update</button>
+
+    <p id="user-info">No User</p>
+    <button id="btn-login">LogIn </button>
+    <br><br>
+
+
+    <!--Handle inpur text-->
+    <p id="name">No Name</p>
+    <input id="input-name" type="text" placeholder="Your name">
+    <button id="btn-update">Update</button>
+
+    <p id="name2">Waiting...</p>
+    <input id="input-name2" type="text" placeholder="Your name">
+    <button id="btn-update2">Update</button>
+
+
+    <script>
+       //Set event listener
+       document.getElementById('btn-update').addEventListener('click',
+        function(){
+            console.log('Update button click');
+            // 2. get the text from the input field
+            const nameInput = document.getElementById('input-name');
+            console.log(nameInput);
+            const name = nameInput.value;
+            console.log('name:', name);
+
+            // set the name
+            const nameValue = document.getElementById('name');
+            nameValue.innerText = name;
+
+        })
+
+        document.getElementById('btn-update2').addEventListener('click',
+            function(){
+                const NameInput = document.getElementById('input-name2');
+                const names = NameInput.value;
+                
+                const NameValue = document.getElementById('name2');
+                NameValue.innerText = names;
+            }
+        )
+
+
+    </script>
+    <script src="event-handler.js"></script>
+</body>
+</html>
